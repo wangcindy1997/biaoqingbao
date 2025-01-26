@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+        }
+        .chat-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #messageInput {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+        #messageInput:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        #sendButton {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        #sendButton:hover {
+            background-color: #45a049;
+        }
+        #sendButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            min-height: 100px;
+            background-color: #fafafa;
+        }
+        #response img {
+            display: block;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        #response p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .follow-up {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 6px;
+            color: #2e7d32;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .follow-up:hover {
+            background-color: #c8e6c9;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>AI表情包助手</h2>
+        <textarea id="messageInput" placeholder="请输入您想要的表情包描述..." rows="4"></textarea>
+        <button id="sendButton">生成表情包</button>
+        <div id="response"></div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
